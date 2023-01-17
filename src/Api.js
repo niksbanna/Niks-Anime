@@ -1,0 +1,1 @@
+export const API_KEY = 'https://animechan.vercel.app/api/';
