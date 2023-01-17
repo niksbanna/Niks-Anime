@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Niks-Anime/static/css/main.60629d25.css",
+    "main.js": "/Niks-Anime/static/js/main.c3c86df6.js",
+    "index.html": "/Niks-Anime/index.html",
+    "main.60629d25.css.map": "/Niks-Anime/static/css/main.60629d25.css.map",
+    "main.c3c86df6.js.map": "/Niks-Anime/static/js/main.c3c86df6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.60629d25.css",
+    "static/js/main.c3c86df6.js"
+  ]
+}
