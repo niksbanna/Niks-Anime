@@ -19,8 +19,8 @@ export default function ByCharacterName() {
     }
 
     return (
-        <div>
-            <section className="min-vh-100 mw7 center avenir" id='byanimetitle'>
+        <div className='min-vh-100'>
+            <section className=" mw7 center " id='byanimetitle'>
                 <hr />
                 <h2 className="f4 bg-near-black white mv0 pa3">By Anime Title</h2>
                 <div className='pa2'>
@@ -40,7 +40,7 @@ export default function ByCharacterName() {
                 </div>
                 <section className="mw5 mw7-ns center bg-light-gray pa3 ph5-ns">
                     <h1 className="mt0">{quote.anime}</h1>
-                    <blockquote className="athelas ml0 mt0 pl4 black-90 bl bw2 b--blue">
+                    <blockquote className=" ml0 mt0 pl4 black-90 bl bw2 b--blue">
                         <p className="f5 f4-m f3-l lh-copy measure mt0">
                             {quote.quote}
                         </p>
