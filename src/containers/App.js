@@ -3,6 +3,9 @@ import Navbar from '../components/Navbar/Navbar'
 import Random from '../components/ByRandom/Random';
 import ByCharacterName from '../components/ByCharacterName/ByCharacterName';
 import ByAnimeTitle from '../components/ByAnimeTitle/ByAnimeTitle';
+import AnimeFacts from '../components/AnimeFacts/AnimeFacts';
+import WaifuGallery from '../components/WaifuGallery/WaifuGallery';
+import AnimeEmotes from '../components/AnimeEmotes/AnimeEmotes';
 import TopButton from '../components/TopScrollButton/TopButton';
 
 export default function App() {
@@ -13,10 +16,10 @@ export default function App() {
             <Random />
             <ByCharacterName />
             <ByAnimeTitle />
+            <AnimeFacts />
+            <WaifuGallery />
+            <AnimeEmotes />
             <TopButton />
-            <div id="soon">
-                <h5 className='tc pa5'>This feature will be available soon...🖤</h5>
-            </div>
         </div>
     )
 }
