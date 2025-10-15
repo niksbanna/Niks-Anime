@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { WAIFU_API } from '../../Api';
+import { ANIME_FACTS } from '../../Api';
 
 export default function AnimeFacts() {
     const [fact, setFact] = useState({ fact: '', tags: [] });
@@ -7,16 +7,15 @@ export default function AnimeFacts() {
 
     const fetchFact = () => {
         setLoading(true);
-        fetch(WAIFU_API.fact)
-            .then(response => response.json())
-            .then(data => {
-                setFact(data);
-                setLoading(false);
-            })
-            .catch((err) => {
-                console.log(err);
-                setLoading(false);
-            });
+        // Get a random fact from the curated list
+        const randomIndex = Math.floor(Math.random() * ANIME_FACTS.length);
+        const randomFact = ANIME_FACTS[randomIndex];
+        
+        // Simulate API delay for better UX
+        setTimeout(() => {
+            setFact(randomFact);
+            setLoading(false);
+        }, 300);
     };
 
     return (

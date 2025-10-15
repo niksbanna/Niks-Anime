@@ -14,7 +14,12 @@ export default function WaifuGallery() {
         fetch(endpoint)
             .then(response => response.json())
             .then(data => {
-                setImage(data);
+                // waifu.pics API returns { url: "..." }
+                setImage({ 
+                    url: data.url,
+                    anime: imageType === 'waifu' ? 'Random Waifu' : 'Random Neko',
+                    artist: ''
+                });
                 setLoading(false);
             })
             .catch((err) => {

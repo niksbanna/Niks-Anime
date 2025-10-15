@@ -19,7 +19,14 @@ export default function AnimeEmotes() {
         { name: 'Bite', key: 'bite' },
         { name: 'Cry', key: 'cry' },
         { name: 'Poke', key: 'poke' },
-        { name: 'Wink', key: 'wink' }
+        { name: 'Wink', key: 'wink' },
+        { name: 'Cuddle', key: 'cuddle' },
+        { name: 'Bonk', key: 'bonk' },
+        { name: 'Yeet', key: 'yeet' },
+        { name: 'Blush', key: 'blush' },
+        { name: 'Happy', key: 'happy' },
+        { name: 'Kick', key: 'kick' },
+        { name: 'Dance', key: 'dance' }
     ];
 
     const fetchEmote = (type) => {
@@ -29,7 +36,11 @@ export default function AnimeEmotes() {
         fetch(WAIFU_API[type])
             .then(response => response.json())
             .then(data => {
-                setEmote(data);
+                // waifu.pics API returns { url: "..." }
+                setEmote({
+                    url: data.url,
+                    anime: `${type.charAt(0).toUpperCase() + type.slice(1)} Reaction`
+                });
                 setLoading(false);
             })
             .catch((err) => {
