@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import Navbar from '../components/Navbar/Navbar'
-import Random from '../components/ByRandom/Random';
-import ByCharacterName from '../components/ByCharacterName/ByCharacterName';
-import ByAnimeTitle from '../components/ByAnimeTitle/ByAnimeTitle';
+import AnimeList from '../components/AnimeList/AnimeList';
+import SceneFinder from '../components/SceneFinder/SceneFinder';
+import Nekosia from '../components/Nekosia/Nekosia';
 import AnimeFacts from '../components/AnimeFacts/AnimeFacts';
 import WaifuGallery from '../components/WaifuGallery/WaifuGallery';
 import AnimeEmotes from '../components/AnimeEmotes/AnimeEmotes';
@@ -11,9 +11,9 @@ export default function App() {
     const [currentSection, setCurrentSection] = useState(0);
     
     const sections = [
-        { id: 'random', component: <Random /> },
-        { id: 'bycharactername', component: <ByCharacterName /> },
-        { id: 'byanimetitle', component: <ByAnimeTitle /> },
+        { id: 'animelist', component: <AnimeList /> },
+        { id: 'scenefinder', component: <SceneFinder /> },
+        { id: 'nekosia', component: <Nekosia /> },
         { id: 'animefacts', component: <AnimeFacts /> },
         { id: 'waifugallery', component: <WaifuGallery /> },
         { id: 'animeemotes', component: <AnimeEmotes /> }
