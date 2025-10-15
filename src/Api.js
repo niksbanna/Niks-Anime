@@ -1,8 +1,12 @@
-export const API_KEY = 'https://animechan.vercel.app/api/';
+// Waifu.it API base URL (for quotes, characters, anime)
+export const WAIFU_IT_API = 'https://waifu.it/api/v4';
 
-// Multiple API endpoints for anime content
+// Multiple API endpoints for anime content using waifu.it
 export const WAIFU_API = {
-    // Primary: waifu.pics API (SFW only)
+    // Quote endpoints from waifu.it
+    quote: `${WAIFU_IT_API}/quote`,
+    
+    // Image endpoints from waifu.pics API (SFW only)
     waifu: 'https://api.waifu.pics/sfw/waifu',
     neko: 'https://api.waifu.pics/sfw/neko',
     

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Buttons from './Buttons';
 import Quote from './Quote';
-import { API_KEY } from '../../Api'
+import { WAIFU_API } from '../../Api'
 
 
 
@@ -10,9 +10,16 @@ export default function Random() {
 
     const handleClick = (value) => {
         if (value) {
-            fetch(`${API_KEY}random`)
+            fetch(WAIFU_API.quote)
                 .then(response => response.json())
-                .then(response => setQoute(response))
+                .then(data => {
+                    // waifu.it returns { quote: "...", author: "...", anime: "..." }
+                    setQoute({
+                        quote: data.quote,
+                        character: data.author,
+                        anime: data.anime
+                    });
+                })
                 .catch((err) => console.log(err))
         }
     }

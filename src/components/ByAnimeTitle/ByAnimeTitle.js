@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react'
-import { API_KEY } from '../../Api';
+import { WAIFU_API } from '../../Api';
 
 export default function ByCharacterName() {
     const [quote, setQoute] = useState([]);
@@ -11,9 +11,17 @@ export default function ByCharacterName() {
         animeTitle.current = searchData;
 
         if (animeTitle.current.length > 0) {
-            fetch(`${API_KEY}random/anime?title=${animeTitle.current}`)
+            // waifu.it API supports filtering by anime
+            fetch(`${WAIFU_API.quote}?anime=${encodeURIComponent(animeTitle.current)}`)
                 .then(response => response.json())
-                .then(response => setQoute(response))
+                .then(data => {
+                    // waifu.it returns { quote: "...", author: "...", anime: "..." }
+                    setQoute({
+                        quote: data.quote,
+                        character: data.author,
+                        anime: data.anime
+                    });
+                })
                 .catch((err) => console.log(err))
         }
     }
