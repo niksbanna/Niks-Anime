@@ -2,9 +2,9 @@ import React from 'react'
 
 export default function Navbar({ onNavigate, currentSection }) {
     const navItems = [
-        { label: 'Quotes', index: 0 },
-        { label: 'By Character', index: 1 },
-        { label: 'By Anime', index: 2 },
+        { label: 'AnimeList', index: 0 },
+        { label: 'SceneFinder', index: 1 },
+        { label: 'Nekosia', index: 2 },
         { label: 'Facts', index: 3 },
         { label: 'Waifus & Nekos', index: 4 },
         { label: 'Emotes & GIFs', index: 5 }

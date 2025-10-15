@@ -1,6 +1,15 @@
 // Waifu.it API base URL (for quotes, characters, anime)
 export const WAIFU_IT_API = 'https://waifu.it/api/v4';
 
+// Jikan API - MyAnimeList API
+export const JIKAN_API = 'https://api.jikan.moe/v4';
+
+// Trace.moe API - Anime scene search
+export const TRACE_MOE_API = 'https://api.trace.moe';
+
+// Nekosia API - Anime images
+export const NEKOSIA_API = 'https://api.nekosia.cat';
+
 // Multiple API endpoints for anime content using waifu.it
 export const WAIFU_API = {
     // Quote endpoints from waifu.it
